@@ -79,13 +79,13 @@ message profileRequest {
 }
 
 message profileResponse {
-  int32 status = 1;
+  in32 status = 1;
   repeated string error = 2;
   repeated profileData responce = 3;
 }
 
 message profileData {
-  init32 id = 1;
+  int32 id = 1;
   string full_name = 2;
   string email = 3;
 }
