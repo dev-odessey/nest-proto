@@ -81,5 +81,11 @@ message profileRequest {
 message profileResponse {
   int32 status = 1;
   repeated string error = 2;
-  any responce = 3;
+  repeated profileData = 3;
+}
+
+message profileData {
+  init32 id = 1;
+  repeated string full_name = 2;
+  repeated string email = 3;
 }
