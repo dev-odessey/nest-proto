@@ -57,7 +57,7 @@ message forgetPasswordRequest {
 message forgetPasswordResponse {
   int32 status = 1;
   repeated string error = 2;
-  any responce = 3;
+  string responce = 3;
 }
 
 // changePassword
@@ -70,7 +70,7 @@ message changePasswordRequest {
 message changePasswordResponse {
   int32 status = 1;
   repeated string error = 2;
-  any responce = 3;
+  string responce = 3;
 }
 
 // profile
