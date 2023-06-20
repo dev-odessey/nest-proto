@@ -76,7 +76,7 @@ message changePasswordResponse {
 // profile
 
 message profileRequest {
-  int32 user;
+  int32 user = 1;
 }
 
 message profileResponse {
