@@ -112,6 +112,7 @@ message profileData {
 
 message profileUpdateRequest {
   int32 user = 1;
+  string string = 2;
 }
 
 message profileUpdateResponse {
