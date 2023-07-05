@@ -3,7 +3,7 @@ syntax = "proto3";
 package property;
 
 service propertyService {
-  rpc property (propertyRequest) returns (propertyResponse) {}
+  rpc findall (propertyRequest) returns (propertyResponse) {}
 }
 
 // property
