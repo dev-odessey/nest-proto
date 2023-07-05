@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package property;
+
+service propertyService {
+  rpc property (propertyRequest) returns (propertyResponse) {}
+}
+
+// property
+
+message propertyRequest {
+}
+
+message propertyResponse {
+  int32 status = 1;
+  repeated string data = 2;
+}
