@@ -9,7 +9,7 @@ service propertyService {
 // property
 message propertyRequest {
   message Builder {
-    string propertyid = 1;
+    string property_id = 1;
     string name = 2;
     string identity_number = 3;
     string pis = 4;
@@ -19,7 +19,7 @@ message propertyRequest {
     string voucher = 8;
     string subsidy_type = 9;
     string sec_subsidy_type = 10;
-    string property_id = 11;
+    string property_id_code = 11;
     string contact_number = 12;
     string imax_id = 13;
     string action_code = 14;
@@ -29,7 +29,7 @@ message propertyRequest {
   }
 
   message Document {
-    string propertyid = 1;
+    string property_id = 1;
     string file = 2;
     string type = 3;
     string title = 4;
@@ -38,7 +38,7 @@ message propertyRequest {
   }
 
   message Housingauthority {
-    string propertyid = 1;
+    string property_id = 1;
     string name = 2;
     string address = 3;
     string city = 4;
@@ -48,7 +48,7 @@ message propertyRequest {
   }
 
   message Hudoffice {
-    string propertyid = 1;
+    string property_id = 1;
     string name = 2;
     string address = 3;
     string city = 4;
@@ -57,7 +57,7 @@ message propertyRequest {
   }
 
   message Incomelimit {
-    string propertyid = 1;
+    string property_id = 1;
     string code = 2;
     string description = 3;
     string median = 4;
