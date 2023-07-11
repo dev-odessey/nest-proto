@@ -6,63 +6,6 @@ service propertyService {
   rpc findall (propertyRequest) returns (propertyResponse) {}
 }
 
-message builder {
-   string propertyid = 1;
-   string name = 2;
-   string identity_number = 3;
-   string pis = 4;
-   string passbook_rate = 5;
-   string amgi = 6;
-   string tax = 7;
-   string voucher = 8;
-   string subsidy_type = 9;
-   string sec_subsidy_type = 10;
-   string property_id = 11;
-   string contact_number = 12;
-   string imax_id = 13;
-   string action_code = 14;
-   string is_hud_owner_property = 15;
-   string displacement_status = 16;
-   string prev_housing_code = 17;
-}
-
-message document {
- string propertyid = 1;
- string file = 2;
- string type = 3;
- string title = 4;
- string description = 5;
- string instruction = 6;
-}
-
-message housingAuthority {
-  string propertyid = 1;
-  string name = 2;
-  string address = 3;
-  string city = 4;
-  string status = 5;
-  string postal_code = 6;
-  string director_full_name = 7;
-}
-
-message hudOffice {
-  string propertyid = 1;
-  string name = 2;
-  string address = 3;
-  string city = 4;
-  string status = 5;
-  string postal_code = 6;
-}
-
-message incomeLimit {
-  string propertyid = 1;
-  string code = 2;
-  string description = 3;
-  string median = 4;
-  string limit = 5;
-  string meta = 6;
-}
-
 // property
 message propertyRequest {
   string name = 1;
@@ -83,11 +26,68 @@ message propertyRequest {
   string program = 16;
   string hud_type  = 17;
 
-  repeated builder = 18;
-  repeated document = 19;
-  repeated housingAuthority = 20;
-  repeated hudOffice = 21;
-  repeated incomeLimit = 22;
+  message builder {
+    string propertyid = 1;
+    string name = 2;
+    string identity_number = 3;
+    string pis = 4;
+    string passbook_rate = 5;
+    string amgi = 6;
+    string tax = 7;
+    string voucher = 8;
+    string subsidy_type = 9;
+    string sec_subsidy_type = 10;
+    string property_id = 11;
+    string contact_number = 12;
+    string imax_id = 13;
+    string action_code = 14;
+    string is_hud_owner_property = 15;
+    string displacement_status = 16;
+    string prev_housing_code = 17;
+  }
+  
+  message document {
+    string propertyid = 1;
+    string file = 2;
+    string type = 3;
+    string title = 4;
+    string description = 5;
+    string instruction = 6;
+  }
+
+  message housingAuthority {
+    string propertyid = 1;
+    string name = 2;
+    string address = 3;
+    string city = 4;
+    string status = 5;
+    string postal_code = 6;
+    string director_full_name = 7;
+  }
+
+  message hudOffice {
+    string propertyid = 1;
+    string name = 2;
+    string address = 3;
+    string city = 4;
+    string status = 5;
+    string postal_code = 6;
+  }
+
+  message incomeLimit {
+    string propertyid = 1;
+    string code = 2;
+    string description = 3;
+    string median = 4;
+    string limit = 5;
+    string meta = 6;
+  }
+
+  repeated BUILDER builder = 18;
+  repeated DOCUMENT document = 19;
+  repeated HOUSINGAUTHORITY housingAuthority = 20;
+  repeated HUDOFFICE hudOffice = 21;
+  repeated INCOMELIMIT incomeLimit = 21;
 }
 
 message propertyResponse {
