@@ -97,11 +97,11 @@ message propertyResponse {
 }
 
 message allpropertiesRequest {
-
+  int32 user = 1;
 }
 
 message allpropertiesResponce {
   int32 status = 1;
   repeated string msg = 2;
-  google.protobuf.Any data = 3;
+  repeated google.protobuf.Any data = 3;
 }
