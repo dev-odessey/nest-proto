@@ -5,13 +5,8 @@ import "google/protobuf/struct.proto";
 package properties;
 
 service propertyService {
-  rpc create (propertyRequest, userRequest) returns (propertyResponse) {}
-  rpc findall (allpropertiesRequest, userRequest) returns (allpropertiesResponce) {}
-}
-
-// user 
-message userRequest{
-  int32 user = 1;
+  rpc create (propertyRequest) returns (propertyResponse) {}
+  rpc findall (allpropertiesRequest) returns (allpropertiesResponce) {}
 }
 
 // property
