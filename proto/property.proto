@@ -68,28 +68,28 @@ message propertyRequest {
   }
 
   int32 user_id = 1;
-  string name = 1;
-  string address = 2;
-  int32 is_associoted_pha = 3;
-  string contact_person = 4;
-  string contact_person_title = 5;
-  string service = 6;
-  string management_code = 7;
-  string owner_name = 8;
-  string management_agency_name = 9;
-  string legal_name = 10;
-  string full_address = 11;
-  string fax_number = 12;
-  string email = 13;
-  string website = 14;
-  string house_program = 15;
-  string program = 16;
-  string hud_type = 17;
-  repeated Builder builder = 18;
-  repeated Document document = 19;
-  repeated Housingauthority housingAuthority = 20;
-  repeated Hudoffice hudOffice = 21;
-  repeated Incomelimit incomeLimit = 22;
+  string name = 2;
+  string address = 3;
+  int32 is_associoted_pha = 4;
+  string contact_person = 5;
+  string contact_person_title = 6;
+  string service = 7;
+  string management_code = 8;
+  string owner_name = 9;
+  string management_agency_name = 10;
+  string legal_name = 11;
+  string full_address = 12;
+  string fax_number = 13;
+  string email = 14;
+  string website = 15;
+  string house_program = 16;
+  string program = 17;
+  string hud_type = 18;
+  repeated Builder builder = 19;
+  repeated Document document = 20;
+  repeated Housingauthority housingAuthority = 21;
+  repeated Hudoffice hudOffice = 22;
+  repeated Incomelimit incomeLimit = 23;
 }
 
 message propertyResponse {
