@@ -15,10 +15,10 @@ message propertyRequest {
     string property_id = 1;
     string name = 2;
     string identity_number = 3;
-    string pis = 4;
-    string passbook_rate = 5;
-    string amgi = 6;
-    string tax = 7;
+    int32 pis = 4;
+    int32 passbook_rate = 5;
+    int32 amgi = 6;
+    int32 tax = 7;
     string voucher = 8;
     string subsidy_type = 9;
     string sec_subsidy_type = 10;
@@ -26,7 +26,7 @@ message propertyRequest {
     string contact_number = 12;
     string imax_id = 13;
     string action_code = 14;
-    int32 is_hud_owner_property = 15;
+    bool is_hud_owner_property = 15;
     string displacement_status = 16;
     string prev_housing_code = 17;
   }
