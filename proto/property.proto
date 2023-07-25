@@ -47,6 +47,7 @@ message propertyRequest {
     string city = 4;
     string status = 5;
     string postal_code = 6;
+    string director_Full_Name = 7;
   }
 
   message Hudoffice {
