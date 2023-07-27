@@ -64,7 +64,7 @@ message propertyRequest {
     string code = 2;
     string description = 3;
     string median = 4;
-    google.protobuf.Any meta = 6;
+    google.protobuf.Struct meta = 6;
     string limit_type = 5;
   }
 
