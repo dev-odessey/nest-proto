@@ -110,6 +110,7 @@ message allpropertiesResponce {
 
 message findpropertiesRequest {
   int32 user = 1;
+  int32 propertyid = 2
 }
 
 message findpropertiesResponce {
