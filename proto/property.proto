@@ -7,6 +7,7 @@ package properties;
 service propertyService {
   rpc create (propertyRequest) returns (propertyResponse) {}
   rpc findall (allpropertiesRequest) returns (allpropertiesResponce) {}
+  rpc find (findpropertiesRequest) returns (findpropertiesResponce) {}
 }
 
 // property
