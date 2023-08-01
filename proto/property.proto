@@ -107,3 +107,13 @@ message allpropertiesResponce {
   repeated string msg = 2;
   repeated google.protobuf.Any data = 3;
 }
+
+message findpropertiesRequest {
+  int32 user = 1;
+}
+
+message findpropertiesResponce {
+  int32 status = 1;
+  string msg = 2;
+  google.protobuf.Any data = 3;
+}
