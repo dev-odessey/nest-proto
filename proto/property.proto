@@ -12,7 +12,7 @@ service propertyService {
 
 message property {
   message Builder {
-    int32 property                          = 1;
+    int32 id                                = 1;
     string property_id                      = 2;
     string name                             = 3;
     string identity_number                  = 4;
@@ -97,12 +97,90 @@ message property {
   repeated Housingauthority housingAuthority = 22;
   repeated Hudoffice hudOffice              = 23;
   repeated Incomelimit incomeLimit          = 24;
-  
 }
 
 // property
 message propertyRequest {
-  property property = 1;
+  message Builder {
+    string property_id = 1;
+    string name = 2;
+    string identity_number = 3;
+    int32 pis = 4;
+    int32 passbook_rate = 5;
+    int32 amgi = 6;
+    int32 tax = 7;
+    string voucher = 8;
+    string subsidy_type = 9;
+    string sec_subsidy_type = 10;
+    string property_id_code = 11;
+    string contact_number = 12;
+    string imax_id = 13;
+    string action_code = 14;
+    bool is_hud_owner_property = 15;
+    string displacement_status = 16;
+    string prev_housing_code = 17;
+  }
+
+  message Document {
+    string property_id = 1;
+    string file = 2;
+    string type = 3;
+    string title = 4;
+    string description = 5;
+    string instruction = 6;
+  }
+
+  message Housingauthority {
+    string property_id = 1;
+    string name = 2;
+    string address = 3;
+    string city = 4;
+    string status = 5;
+    string postal_code = 6;
+    string director_Full_Name = 7;
+  }
+
+  message Hudoffice {
+    string property_id = 1;
+    string name = 2;
+    string address = 3;
+    string city = 4;
+    string status = 5;
+    string postal_code = 6;
+  }
+
+  message Incomelimit {
+    string property_name = 1;
+    string code = 2;
+    string description = 3;
+    string median = 4;
+    repeated google.protobuf.Any meta = 6;
+    string limit_type = 5;
+  }
+
+  int32 user_id = 1;
+  string name = 2;
+  string address = 3;
+  int32 is_associoted_pha = 4;
+  string contact_person = 5;
+  string contact_person_title = 6;
+  string service = 7;
+  string management_code = 8;
+  string owner_name = 9;
+  string management_agency_name = 10;
+  string legal_name = 11;
+  string full_address = 12;
+  string fax_number = 13;
+  string email = 14;
+  string website = 15;
+  string house_program = 16;
+  string program = 17;
+  string hud_type = 18;
+  repeated Builder builder = 19;
+  repeated Document document = 20;
+  repeated Housingauthority housingAuthority = 21;
+  repeated Hudoffice hudOffice = 22;
+  repeated Incomelimit incomeLimit = 23;
 }
 
 message propertyResponse {
@@ -117,7 +195,7 @@ message allpropertiesRequest {
 message allpropertiesResponce {
   int32 status = 1;
   repeated string msg = 2;
-  repeated property property = 3;
+  repeated google.protobuf.Any data = 3;
 }
 
 message findpropertiesRequest {
@@ -128,5 +206,5 @@ message findpropertiesRequest {
 message findpropertiesResponce {
   int32 status = 1;
   string msg = 2;
-  property property = 3;
+  google.protobuf.Any data = 3;
 }
