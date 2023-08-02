@@ -77,7 +77,7 @@ message property {
   int32 id                                  = 2;
   string name                               = 3;
   string address                            = 4;
-  int32 is_associoted_pha                   = 5;
+  int32 is_associated_pha                   = 5;
   string contact_person                     = 6;
   string contact_person_title               = 7;
   string service                            = 8;
