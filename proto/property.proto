@@ -12,7 +12,7 @@ service propertyService {
 
 message property {
   message Builder {
-    int32 id                                = 1;
+    int32 property                          = 1;
     string property_id                      = 2;
     string name                             = 3;
     string identity_number                  = 4;
@@ -74,7 +74,7 @@ message property {
   }
 
   int32 user_id                             = 1;
-  int32 propertyid                          = 2;
+  int32 id                                  = 2;
   string name                               = 3;
   string address                            = 4;
   int32 is_associoted_pha                   = 5;
@@ -195,7 +195,7 @@ message allpropertiesRequest {
 message allpropertiesResponce {
   int32 status = 1;
   repeated string msg = 2;
-  repeated google.protobuf.Any data = 3;
+  repeated property data = 3;
 }
 
 message findpropertiesRequest {
@@ -206,5 +206,5 @@ message findpropertiesRequest {
 message findpropertiesResponce {
   int32 status = 1;
   string msg = 2;
-  google.protobuf.Any data = 3;
+  property data = 3;
 }
