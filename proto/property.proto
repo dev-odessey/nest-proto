@@ -93,10 +93,10 @@ message properties {
   string program                            = 18;
   string hudType                            = 19;
   repeated Builder builder                  = 20;
-  // repeated Document document                = 21;
-  // repeated Housingauthority housingAuthority = 22;
-  // repeated Hudoffice hudOffice              = 23;
-  // repeated Incomelimit incomeLimit          = 24;
+  repeated Document document                = 21;
+  repeated Housingauthority housingAuthority = 22;
+  repeated Hudoffice hudOffice              = 23;
+  repeated Incomelimit incomeLimit          = 24;
 }
 
 // property
