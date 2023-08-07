@@ -185,7 +185,8 @@ message propertyRequest {
 
 message propertyResponse {
   int32 status = 1;
-  repeated string data = 2;
+  string msg = 2;
+  repeated properties data = 3;
 }
 
 message allpropertiesRequest {
@@ -194,7 +195,7 @@ message allpropertiesRequest {
 
 message allpropertiesResponce {
   int32 status = 1;
-  repeated string msg = 2;
+  string msg = 2;
   repeated properties data = 3;
 }
 
@@ -206,5 +207,5 @@ message findpropertiesRequest {
 message findpropertiesResponce {
   int32 status = 1;
   string msg = 2;
-  properties data = 3;
+  repeated properties data = 3;
 }
