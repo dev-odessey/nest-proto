@@ -99,7 +99,7 @@ message properties {
   repeated Incomelimit incomeLimit            = 24;
 }
 
-// property
+// create property
 message propertyRequest {
   message Builder {
     string property_id = 1;
@@ -149,13 +149,38 @@ message propertyRequest {
     string postal_code = 6;
   }
 
+  message row {
+    string effectiveDate  = 1;
+    float mediumIncome    = 2;
+    float income1         = 3;
+    float income2         = 4;
+    float income3         = 5;
+    float income4         = 6;
+    float income5         = 7;
+    float income6         = 8;
+    float income7         = 9;
+    float income8         = 10;
+    float income9         = 11;
+    float income10        = 12;
+    float income11        = 13;
+    float income12        = 14;
+    float income13        = 15;
+    float income14        = 16;
+    float income15        = 17;
+    float income16        = 18;
+  }
+
+  message meta {
+    row row = 1;
+  }
+
   message Incomelimit {
-    string property_name = 1;
-    string code = 2;
-    string description = 3;
-    string median = 4;
-    repeated google.protobuf.Any meta = 6;
-    string limit_type = 5;
+    string property_name  = 1;
+    string code           = 2;
+    string description    = 3;
+    string median         = 4;
+    repeated meta meta    = 6;
+    string limit_type     = 5;
   }
 
   int32 user_id = 1;
@@ -189,6 +214,7 @@ message propertyResponse {
   repeated properties data = 3;
 }
 
+// all Properties
 message allpropertiesRequest {
   int32 user = 1;
 }
@@ -199,12 +225,135 @@ message allpropertiesResponce {
   repeated properties data = 3;
 }
 
+// find one
 message findpropertiesRequest {
   int32 user = 1;
   int32 propertyid = 2;
 }
 
 message findpropertiesResponce {
+  int32 status = 1;
+  string msg = 2;
+  repeated properties data = 3;
+}
+
+// create property
+message updatePropertyRequest {
+  message Builder {
+    int32 id                                  = 1;
+    string property_id                        = 2;
+    string name                               = 3;
+    string identity_number                    = 4;
+    int32 pis                                 = 5;
+    int32 passbook_rate                       = 6;
+    int32 amgi                                = 7;
+    int32 tax                                 = 8;
+    string voucher                            = 9;
+    string subsidy_type                       = 10;
+    string sec_subsidy_type                   = 11;
+    string property_id_code                   = 12;
+    string contact_number                     = 13;
+    string imax_id                            = 14;
+    string action_code                        = 15;
+    bool is_hud_owner_property                = 16;
+    string displacement_status                = 17;
+    string prev_housing_code                  = 18;
+  }
+
+  message Document {
+    int32 id                                  = 1;
+    string property_id                        = 2;
+    string file                               = 3;
+    string type                               = 4;
+    string title                              = 5;
+    string description                        = 6;
+    string instruction                        = 7;
+  }
+
+  message Housingauthority {
+    int32 id                                  = 1;
+    string property_id                        = 2;
+    string name                               = 3;
+    string address                            = 4;
+    string city                               = 5;
+    string status                             = 6;
+    string postal_code                        = 7;
+    string director_Full_Name                 = 8;
+  }
+
+  message Hudoffice {
+    int32 id                                  = 1;
+    string property_id                        = 2;
+    string name                               = 3;
+    string address                            = 4;
+    string city                               = 5;
+    string status                             = 6;
+    string postal_code                        = 7;
+  }
+
+  message row {
+    int32 id                                  = 1;
+    string effectiveDate                      = 2;
+    float mediumIncome                        = 3;
+    float income1                             = 4;
+    float income2                             = 5;
+    float income3                             = 6;
+    float income4                             = 7;
+    float income5                             = 8;
+    float income6                             = 9;
+    float income7                             = 10;
+    float income8                             = 11;
+    float income9                             = 12;
+    float income10                            = 13;
+    float income11                            = 14;
+    float income12                            = 15;
+    float income13                            = 16;
+    float income14                            = 17;
+    float income15                            = 18;
+    float income16                            = 19;
+  }
+
+  message meta {
+    row row                                   = 1;
+  }
+
+  message Incomelimit {
+    int32 id                                  = 1;
+    string property_name                      = 2;
+    string code                               = 3;
+    string description                        = 4;
+    string median                             = 5;
+    repeated meta meta                        = 6;
+    string limit_type                         = 7;
+  }
+
+  int32 id                                    = 1;
+  int32 user_id                               = 2;
+  string name                                 = 3;
+  string address                              = 4;
+  int32 is_associoted_pha                     = 5;
+  string contact_person                       = 6;
+  string contact_person_title                 = 7;
+  string service                              = 8;
+  string management_code                      = 9;
+  string owner_name                           = 10;
+  string management_agency_name               = 11;
+  string legal_name                           = 12;
+  string full_address                         = 13;
+  string fax_number                           = 14;
+  string email                                = 15;
+  string website                              = 16;
+  string house_program                        = 17;
+  string program                              = 18;
+  string hud_type                             = 19;
+  repeated Builder builder                    = 20;
+  repeated Document document                  = 21;
+  repeated Housingauthority housingAuthority  = 22;
+  repeated Hudoffice hudOffice                = 23;
+  repeated Incomelimit incomeLimit            = 24;
+}
+
+message updatePropertyResponse {
   int32 status = 1;
   string msg = 2;
   repeated properties data = 3;
