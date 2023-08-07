@@ -10,7 +10,7 @@ service propertyService {
   rpc find (findpropertiesRequest) returns (findpropertiesResponce) {}
 }
 
-message property {
+message properties {
   // message Builder {
   //   int32 property                          = 1;
   //   string property_id                      = 2;
@@ -195,7 +195,7 @@ message allpropertiesRequest {
 message allpropertiesResponce {
   int32 status = 1;
   repeated string msg = 2;
-  repeated property data = 3;
+  repeated properties data = 3;
 }
 
 message findpropertiesRequest {
@@ -206,5 +206,5 @@ message findpropertiesRequest {
 message findpropertiesResponce {
   int32 status = 1;
   string msg = 2;
-  property data = 3;
+  properties data = 3;
 }
