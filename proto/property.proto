@@ -12,7 +12,7 @@ service propertyService {
 
 message properties {
   message Builder {
-    int32 property                          = 1;
+    int32 id                                = 1;
     string property_id                      = 2;
     string name                             = 3;
     string identity_number                  = 4;
@@ -33,7 +33,7 @@ message properties {
   }
 
   message Document {
-    int32 property                          = 1;
+    int32 id                                = 1;
     string property_id                      = 2;
     string file                             = 3;
     string type                             = 4;
@@ -43,7 +43,7 @@ message properties {
   }
 
   message Housingauthority {
-    int32 property                          = 1;
+    int32 id                                = 1;
     string property_id                      = 2;
     string name                             = 3;
     string address                          = 4;
@@ -54,7 +54,7 @@ message properties {
   }
 
   message Hudoffice {
-    int32 property                          = 1;
+    int32 id                                = 1;
     string property_id                      = 2;
     string name                             = 3;
     string address                          = 4;
@@ -64,7 +64,7 @@ message properties {
   }
 
   message Incomelimit {
-    int32 property                          = 1;
+    int32 id                                = 1;
     string property_name                    = 2;
     string code                             = 3;
     string description                      = 4;
