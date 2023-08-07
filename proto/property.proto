@@ -11,92 +11,92 @@ service propertyService {
 }
 
 message properties {
-  // message Builder {
-  //   int32 property                          = 1;
-  //   string property_id                      = 2;
-  //   string name                             = 3;
-  //   string identity_number                  = 4;
-  //   int32 pis                               = 5;
-  //   int32 passbook_rate                     = 6;
-  //   int32 amgi                              = 7;
-  //   int32 tax                               = 8;
-  //   string voucher                          = 9;
-  //   string subsidy_type                     = 10;
-  //   string sec_subsidy_type                 = 11;
-  //   string property_id_code                 = 12;
-  //   string contact_number                   = 13;
-  //   string imax_id                          = 14;
-  //   string action_code                      = 15;
-  //   bool is_hud_owner_property              = 16;
-  //   string displacement_status              = 17;
-  //   string prev_housing_code                = 18;
-  // }
+  message Builder {
+    int32 property                          = 1;
+    string property_id                      = 2;
+    string name                             = 3;
+    string identity_number                  = 4;
+    int32 pis                               = 5;
+    int32 passbook_rate                     = 6;
+    int32 amgi                              = 7;
+    int32 tax                               = 8;
+    string voucher                          = 9;
+    string subsidy_type                     = 10;
+    string sec_subsidy_type                 = 11;
+    string property_id_code                 = 12;
+    string contact_number                   = 13;
+    string imax_id                          = 14;
+    string action_code                      = 15;
+    bool is_hud_owner_property              = 16;
+    string displacement_status              = 17;
+    string prev_housing_code                = 18;
+  }
 
-  // message Document {
-  //   int32 property                          = 1;
-  //   string property_id                      = 2;
-  //   string file                             = 3;
-  //   string type                             = 4;
-  //   string title                            = 5;
-  //   string description                      = 6;
-  //   string instruction                      = 7;
-  // }
+  message Document {
+    int32 property                          = 1;
+    string property_id                      = 2;
+    string file                             = 3;
+    string type                             = 4;
+    string title                            = 5;
+    string description                      = 6;
+    string instruction                      = 7;
+  }
 
-  // message Housingauthority {
-  //   int32 property                          = 1;
-  //   string property_id                      = 2;
-  //   string name                             = 3;
-  //   string address                          = 4;
-  //   string city                             = 5;
-  //   string status                           = 6;
-  //   string postal_code                      = 7;
-  //   string director_Full_Name               = 8;
-  // }
+  message Housingauthority {
+    int32 property                          = 1;
+    string property_id                      = 2;
+    string name                             = 3;
+    string address                          = 4;
+    string city                             = 5;
+    string status                           = 6;
+    string postal_code                      = 7;
+    string director_Full_Name               = 8;
+  }
 
-  // message Hudoffice {
-  //   int32 property                          = 1;
-  //   string property_id                      = 2;
-  //   string name                             = 3;
-  //   string address                          = 4;
-  //   string city                             = 5;
-  //   string status                           = 6;
-  //   string postal_code                      = 7;
-  // }
+  message Hudoffice {
+    int32 property                          = 1;
+    string property_id                      = 2;
+    string name                             = 3;
+    string address                          = 4;
+    string city                             = 5;
+    string status                           = 6;
+    string postal_code                      = 7;
+  }
 
-  // message Incomelimit {
-  //   int32 property                          = 1;
-  //   string property_name                    = 2;
-  //   string code                             = 3;
-  //   string description                      = 4;
-  //   string median                           = 5;
-  //   repeated google.protobuf.Any meta       = 6;
-  //   string limit_type                       = 7;
-  // }
+  message Incomelimit {
+    int32 property                          = 1;
+    string property_name                    = 2;
+    string code                             = 3;
+    string description                      = 4;
+    string median                           = 5;
+    repeated google.protobuf.Any meta       = 6;
+    string limit_type                       = 7;
+  }
 
   int32 id                                  = 1;
   int32 userId                             = 2;
   string name                               = 3;
   string address                            = 4;
-  int32 isAssociatedPha                   = 5;
-  string contactPerson                     = 6;
-  string contactPersonTitle               = 7;
+  int32 isAssociatedPha                     = 5;
+  string contactPerson                      = 6;
+  string contactPersonTitle                 = 7;
   string service                            = 8;
-  string managementCode                    = 9;
-  string ownerName                         = 10;
-  string managementAgencyName             = 11;
-  string legalName                         = 12;
-  string fullAddress                       = 13;
-  string faxNumber                         = 14;
+  string managementCode                     = 9;
+  string ownerName                          = 10;
+  string managementAgencyName               = 11;
+  string legalName                          = 12;
+  string fullAddress                        = 13;
+  string faxNumber                          = 14;
   string email                              = 15;
   string website                            = 16;
-  string houseProgram                      = 17;
+  string houseProgram                       = 17;
   string program                            = 18;
-  string hudType                           = 19;
-  // repeated Builder builder                  = 20;
-  // repeated Document document                = 21;
-  // repeated Housingauthority housingAuthority = 22;
-  // repeated Hudoffice hudOffice              = 23;
-  // repeated Incomelimit incomeLimit          = 24;
+  string hudType                            = 19;
+  repeated Builder builder                  = 20;
+  repeated Document document                = 21;
+  repeated Housingauthority housingAuthority = 22;
+  repeated Hudoffice hudOffice              = 23;
+  repeated Incomelimit incomeLimit          = 24;
 }
 
 // property
