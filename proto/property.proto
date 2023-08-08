@@ -180,7 +180,7 @@ message propertyRequest {
     string code           = 2;
     string description    = 3;
     string median         = 4;
-    repeated meta meta    = 6;
+    repeated row meta     = 6;
     string limit_type     = 5;
   }
 
