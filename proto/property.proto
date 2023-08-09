@@ -93,7 +93,7 @@ message properties {
     string code                               = 3;
     string description                        = 4;
     string median                             = 5;
-    repeated meta meta                        = 6;
+    repeated row meta                        = 6;
     string limit_type                         = 7;
   }
 
