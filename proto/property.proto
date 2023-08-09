@@ -83,13 +83,17 @@ message properties {
     float income16                            = 18;
   }
 
+  message meta {
+    row row = 1;
+  }
+
   message Incomelimit {
     int32 id                                  = 1;
     string property_name                      = 2;
     string code                               = 3;
     string description                        = 4;
     string median                             = 5;
-    repeated row meta                         = 6;
+    repeated meta meta                         = 6;
     string limit_type                         = 7;
   }
 
