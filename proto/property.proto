@@ -62,38 +62,13 @@ message properties {
     string postal_code                      = 7;
   }
 
-  message row {
-    string effectiveDate                      = 1;
-    float mediumIncome                        = 2;
-    float income1                             = 3;
-    float income2                             = 4;
-    float income3                             = 5;
-    float income4                             = 6;
-    float income5                             = 7;
-    float income6                             = 8;
-    float income7                             = 9;
-    float income8                             = 10;
-    float income9                             = 11;
-    float income10                            = 12;
-    float income11                            = 13;
-    float income12                            = 14;
-    float income13                            = 15;
-    float income14                            = 16;
-    float income15                            = 17;
-    float income16                            = 18;
-  }
-
-  message meta {
-    repeated row row                          = 1;
-  }
-
   message Incomelimit {
     int32 id                                  = 1;
     string property_name                      = 2;
     string code                               = 3;
     string description                        = 4;
     string median                             = 5;
-    repeated row meta                        = 6;
+    string meta                               = 6;
     string limit_type                         = 7;
   }
 
