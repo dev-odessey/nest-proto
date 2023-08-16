@@ -121,12 +121,13 @@ message propertyRequest {
   }
 
   message Document {
-    string property_id = 1;
-    string file = 2;
-    string type = 3;
-    string title = 4;
-    string description = 5;
-    string instruction = 6;
+    string property_id  = 1;
+    string file         = 2;
+    bytes file_content  = 3;
+    string type         = 4;
+    string title        = 5;
+    string description  = 6;
+    string instruction  = 7;
   }
 
   message Housingauthority {
@@ -263,10 +264,11 @@ message updatePropertyRequest {
     int32 id                                  = 1;
     string property_id                        = 2;
     string file                               = 3;
-    string type                               = 4;
-    string title                              = 5;
-    string description                        = 6;
-    string instruction                        = 7;
+    bytes file_content                        = 4;
+    string type                               = 5;
+    string title                              = 6;
+    string description                        = 7;
+    string instruction                        = 8;
   }
 
   message Housingauthority {
